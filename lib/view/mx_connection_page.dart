@@ -19,10 +19,7 @@ class MxConnectionPageState extends State<MxConnectionPage> {
 
   @override
   void initState() {
-    _viewModel = MxConnectionViewModel(
-      _flutterWebviewPlugin,
-      context,
-    );
+    _viewModel = MxConnectionViewModel(_flutterWebviewPlugin);
     _viewModel.setup();
     super.initState();
   }

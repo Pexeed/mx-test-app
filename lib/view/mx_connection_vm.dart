@@ -5,14 +5,11 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class MxConnectionViewModel {
   FlutterWebviewPlugin _flutterWebviewPlugin;
-  BuildContext _context;
   Uri uri;
 
   StreamSubscription<WebViewStateChanged> _onStateChanged;
 
-  MxConnectionViewModel(
-      this._flutterWebviewPlugin,
-      this._context);
+  MxConnectionViewModel(this._flutterWebviewPlugin);
 
   Future<void> setup() async {
     await setupListeners();
